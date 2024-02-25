@@ -1,0 +1,25 @@
+{
+  "name": "gripmock-openapi",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Documentation and API specification GripMock.",
+  "private": true,
+  "scripts": {
+    "build": "redocly build-docs api.yaml -o docs/index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "github.com/bavix/gripmock-openapi"
+  },
+  "keywords": [
+    "gripmock",
+    "openapi",
+    "api",
+    "docs"
+  ],
+  "author": "Maksim Babichev",
+  "license": "MIT",
+  "dependencies": {
+    "@redocly/cli": "^1.9.1"
+  }
+}
