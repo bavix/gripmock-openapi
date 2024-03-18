@@ -139,6 +139,13 @@ paths:
       summary: Get Stub by ID
       description: Searches for Stub by ID
       operationId: findByID
+      parameters:
+        - name: uuid
+          in: path
+          description: ID of stub
+          required: true
+          schema:
+            $ref: '#/components/schemas/ID'
       responses:
         '200':
           description: Successful operation
