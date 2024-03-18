@@ -2,7 +2,7 @@ openapi: 3.0.2
 servers:
   - url: /api
 info:
-  version: 2.4.0
+  version: 3.0.0
   title: GripMock API Schema
 tags:
   - name: stubs
@@ -133,6 +133,19 @@ paths:
             schema:
               $ref: '#/components/schemas/ListID'
   '/stubs/{uuid}':
+    get:
+      tags:
+        - stubs
+      summary: Get Stub by ID
+      description: Searches for Stub by ID
+      operationId: findByID
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Stub'
     delete:
       tags:
         - stubs
