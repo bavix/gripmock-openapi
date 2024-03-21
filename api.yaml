@@ -59,7 +59,7 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/Service'
-  /services/{serviceID}:
+  /services/{serviceID}/methods:
     get:
       tags:
         - services
@@ -264,9 +264,12 @@ components:
     Method:
       type: object
       required:
+        - id
         - service
         - name
       properties:
+        id:
+          type: string
         service:
           $ref: '#/components/schemas/Service'
         name:
