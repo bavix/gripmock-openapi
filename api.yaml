@@ -7,6 +7,8 @@ info:
 tags:
   - name: stubs
     description: Stubs storage management
+  - name: services
+    description: Services reflection
   - name: healthcheck
     description: Healthcheck
 paths:
@@ -39,6 +41,47 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/MessageOK'
+
+  # internal
+  /services:
+    get:
+      tags:
+        - services
+      summary: Services
+      description: List of registered services
+      operationId: servicesList
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Service'
+  /services/{serviceID}:
+    get:
+      tags:
+        - services
+      summary: Service methods
+      description: List of registered service methods
+      operationId: serviceMethodsList
+      parameters:
+        - name: serviceID
+          in: path
+          description: Service ID
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Method'
 
   # stubs
   /stubs/used:
@@ -204,6 +247,30 @@ components:
         time:
           type: string
           format: date-time
+    # services
+    Service:
+      type: object
+      required:
+        - id
+        - package
+        - name
+      properties:
+        id:
+          type: string
+        package:
+          type: string
+        name:
+          type: string
+    Method:
+      type: object
+      required:
+        - service
+        - name
+      properties:
+        service:
+          $ref: '#/components/schemas/Service'
+        name:
+          type: string
     # stubs
     ID:
       type: string
