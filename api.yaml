@@ -265,13 +265,16 @@ components:
       type: object
       required:
         - id
-        - service
+        - service_id
+        - package
         - name
       properties:
         id:
           type: string
-        service:
-          $ref: '#/components/schemas/Service'
+        service_id:
+          type: string
+        package:
+          type: string
         name:
           type: string
     # stubs
