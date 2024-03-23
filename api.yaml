@@ -9,6 +9,8 @@ tags:
     description: Stubs storage management
   - name: services
     description: Services reflection
+  - name: dashboard
+    description: Dashboard
   - name: healthcheck
     description: Healthcheck
 paths:
@@ -69,7 +71,7 @@ paths:
       parameters:
         - name: serviceID
           in: path
-          description: Service ID
+          description: ID of service
           required: true
           schema:
             type: string
@@ -254,6 +256,7 @@ components:
         - id
         - package
         - name
+        - methods
       properties:
         id:
           type: string
@@ -261,19 +264,17 @@ components:
           type: string
         name:
           type: string
+        methods:
+          type: array
+          items:
+            $ref: '#/components/schemas/Method'
     Method:
       type: object
       required:
         - id
-        - service_id
-        - package
         - name
       properties:
         id:
-          type: string
-        service_id:
-          type: string
-        package:
           type: string
         name:
           type: string
