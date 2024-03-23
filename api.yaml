@@ -2,11 +2,15 @@ openapi: 3.0.2
 servers:
   - url: /api
 info:
-  version: 2.4.0
+  version: 3.0.0
   title: GripMock API Schema
 tags:
   - name: stubs
     description: Stubs storage management
+  - name: services
+    description: Services reflection
+  - name: dashboard
+    description: Dashboard
   - name: healthcheck
     description: Healthcheck
 paths:
@@ -39,6 +43,47 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/MessageOK'
+
+  # internal
+  /services:
+    get:
+      tags:
+        - services
+      summary: Services
+      description: List of registered services
+      operationId: servicesList
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Service'
+  /services/{serviceID}/methods:
+    get:
+      tags:
+        - services
+      summary: Service methods
+      description: List of registered service methods
+      operationId: serviceMethodsList
+      parameters:
+        - name: serviceID
+          in: path
+          description: ID of service
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Method'
 
   # stubs
   /stubs/used:
@@ -133,6 +178,26 @@ paths:
             schema:
               $ref: '#/components/schemas/ListID'
   '/stubs/{uuid}':
+    get:
+      tags:
+        - stubs
+      summary: Get Stub by ID
+      description: Searches for Stub by ID
+      operationId: findByID
+      parameters:
+        - name: uuid
+          in: path
+          description: ID of stub
+          required: true
+          schema:
+            $ref: '#/components/schemas/ID'
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Stub'
     delete:
       tags:
         - stubs
@@ -184,6 +249,35 @@ components:
         time:
           type: string
           format: date-time
+    # services
+    Service:
+      type: object
+      required:
+        - id
+        - package
+        - name
+        - methods
+      properties:
+        id:
+          type: string
+        package:
+          type: string
+        name:
+          type: string
+        methods:
+          type: array
+          items:
+            $ref: '#/components/schemas/Method'
+    Method:
+      type: object
+      required:
+        - id
+        - name
+      properties:
+        id:
+          type: string
+        name:
+          type: string
     # stubs
     ID:
       type: string
