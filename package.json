@@ -20,6 +20,6 @@
   "author": "Maksim Babichev",
   "license": "MIT",
   "dependencies": {
-    "@redocly/cli": "^1.10.5"
+    "@redocly/cli": "^1.10.6"
   }
 }
