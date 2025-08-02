@@ -487,6 +487,7 @@ components:
           type: object
           additionalProperties: true
         stream:
+          x-go-type-skip-optional-pointer: true
           type: array
           items:
             type: object
