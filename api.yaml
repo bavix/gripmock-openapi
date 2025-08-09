@@ -29,7 +29,7 @@ paths:
       tags:
         - healthcheck
       summary: Liveness check
-      description: The test says that the service is alive and ready to handle requests
+      description: This endpoint indicates that the service is alive and ready to handle requests
       operationId: liveness
       responses:
         '200':
