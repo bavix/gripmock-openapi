@@ -29,7 +29,7 @@ paths:
       tags:
         - healthcheck
       summary: Liveness check
-      description: The test says that the service is alive and yet
+      description: The test says that the service is alive and ready to handle requests
       operationId: liveness
       responses:
         '200':
@@ -171,7 +171,7 @@ paths:
       tags:
         - stubs
       summary: Add a new stub to the store
-      description: Add a new stub to the store
+      description: Creates a new stub or multiple stubs and adds them to the storage
       operationId: addStub
       responses:
         '200':
@@ -188,7 +188,7 @@ paths:
         '500':
           description: Internal Server Error
       requestBody:
-        description: Create a new pet in the store
+        description: Create a new stub in the store
         required: true
         content:
           application/json:
@@ -213,7 +213,7 @@ paths:
     post:
       tags:
         - stubs
-      summary: Deletes a pack by IDs
+      summary: Deletes a batch of stubs by IDs
       description: Takes IDs as input and deletes them
       operationId: batchStubsDelete
       responses:
@@ -226,7 +226,7 @@ paths:
         '500':
           description: Internal Server Error
       requestBody:
-        description: Create a new pet in the store
+        description: Delete stubs by their IDs
         required: true
         content:
           application/json:
@@ -274,7 +274,7 @@ paths:
             $ref: '#/components/schemas/ID'
       responses:
         '204':
-          description: successful operation
+          description: Successful operation
         '400':
           description: Invalid UUID format
         '404':
@@ -302,7 +302,7 @@ paths:
         '500':
           description: Internal Server Error
       requestBody:
-        description: Description of filtering
+        description: Search criteria including service, method, headers and data to match against stubs
         required: true
         content:
           application/json:
@@ -438,6 +438,11 @@ components:
           $ref: '#/components/schemas/StubHeaders'
         input:
           $ref: '#/components/schemas/StubInput'
+        inputs:
+          type: array
+          description: Inputs to match against. If multiple inputs are provided, the stub will be matched if any of the inputs match.
+          items:
+            $ref: '#/components/schemas/StubInput'
         output:
           $ref: '#/components/schemas/StubOutput'
     StubInput:
