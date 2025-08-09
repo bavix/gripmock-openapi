@@ -274,7 +274,7 @@ paths:
             $ref: '#/components/schemas/ID'
       responses:
         '204':
-          description: Successful operation
+          description: successful operation
         '400':
           description: Invalid UUID format
         '404':
