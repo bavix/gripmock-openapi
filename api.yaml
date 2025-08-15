@@ -513,6 +513,5 @@ components:
         delay:
           type: string
           x-go-type: time.Duration
-          x-go-type-skip-optional-pointer: false
           description: Delay before sending the response
           example: "1s"
