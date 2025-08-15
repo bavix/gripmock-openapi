@@ -513,3 +513,11 @@ components:
             name: codes
             path: google.golang.org/grpc/codes
           example: 3
+        delay:
+          type: string
+          x-go-type: time.Duration
+          x-go-type-import:
+            name: time
+            path: time
+          description: Delay before sending the response
+          example: "1s"
