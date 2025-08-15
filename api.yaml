@@ -474,19 +474,15 @@ components:
         ignoreArrayOrder:
           type: boolean
           default: false
-          x-omitzero: true
         equals:
           type: object
           additionalProperties: true
-          x-omitzero: true
         contains:
           type: object
           additionalProperties: true
-          x-omitzero: true
         matches:
           type: object
           additionalProperties: true
-          x-omitzero: true
     StubHeaders:
       type: object
       properties:
@@ -494,39 +490,32 @@ components:
           type: object
           additionalProperties:
             type: string
-          x-omitzero: true
         contains:
           type: object
           additionalProperties:
             type: string
-          x-omitzero: true
         matches:
           type: object
           additionalProperties:
             type: string
-          x-omitzero: true
     StubOutput:
       type: object
       properties:
         data:
           type: object
           additionalProperties: true
-          x-omitzero: true
         stream:
           type: array
           items:
             type: object
             additionalProperties: true
-          x-omitzero: true
         headers:
           type: object
           additionalProperties:
             type: string
-          x-omitzero: true
         error:
           type: string
           example: Message not found
-          x-omitzero: true
         code:
           type: integer
           format: uint32
@@ -535,7 +524,6 @@ components:
             name: codes
             path: google.golang.org/grpc/codes
           example: 3
-          x-omitzero: true
         delay:
           type: string
           x-go-type: time.Duration
