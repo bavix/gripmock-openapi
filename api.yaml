@@ -484,9 +484,6 @@ components:
           x-go-type-skip-optional-pointer: true
     StubOutput:
       type: object
-      required:
-        - data
-        - error
       properties:
         data:
           type: object
@@ -519,5 +516,6 @@ components:
           x-go-type-import:
             name: time
             path: time
+          x-go-type-skip-optional-pointer: true
           description: Delay before sending the response
           example: "1s"
