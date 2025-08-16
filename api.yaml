@@ -396,7 +396,6 @@ components:
           type: object
           additionalProperties:
             type: string
-          x-omitzero: true
         data:
           type: object
           x-go-type: interface{}
@@ -412,7 +411,6 @@ components:
           type: object
           additionalProperties:
             type: string
-          x-omitzero: true
         data:
           type: object
           x-go-type: interface{}
@@ -453,7 +451,6 @@ components:
           type: integer
           default: 0
           description: Priority of the stub. Higher priority stubs are matched first.
-          x-omitzero: true
         headers:
           $ref: '#/components/schemas/StubHeaders'
         input:
@@ -464,7 +461,6 @@ components:
           description: Inputs to match against. If multiple inputs are provided, the stub will be matched if any of the inputs match.
           items:
             $ref: '#/components/schemas/StubInput'
-          x-omitzero: true
         output:
           $ref: '#/components/schemas/StubOutput'
           x-omitzero: false
