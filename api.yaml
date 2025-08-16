@@ -453,6 +453,7 @@ components:
           type: integer
           default: 0
           description: Priority of the stub. Higher priority stubs are matched first.
+          x-go-type-skip-optional-pointer: true
         headers:
           $ref: '#/components/schemas/StubHeaders'
         input:
@@ -488,6 +489,7 @@ components:
           x-go-type-skip-optional-pointer: true
     StubHeaders:
       type: object
+      x-go-type-skip-optional-pointer: true
       properties:
         equals:
           type: object
