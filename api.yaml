@@ -430,6 +430,7 @@ components:
             name: codes
             path: google.golang.org/grpc/codes
           example: 3
+          x-go-type-skip-optional-pointer: true
     Stub:
       type: object
       required:
