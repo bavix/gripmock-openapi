@@ -396,6 +396,7 @@ components:
           type: object
           additionalProperties:
             type: string
+          x-go-type-skip-optional-pointer: true
         data:
           type: object
           x-go-type: interface{}
@@ -411,6 +412,7 @@ components:
           type: object
           additionalProperties:
             type: string
+          x-go-type-skip-optional-pointer: true
         data:
           type: object
           x-go-type: interface{}
@@ -461,6 +463,7 @@ components:
           description: Inputs to match against. If multiple inputs are provided, the stub will be matched if any of the inputs match.
           items:
             $ref: '#/components/schemas/StubInput'
+          x-go-type-skip-optional-pointer: true
         output:
           $ref: '#/components/schemas/StubOutput'
           x-omitzero: false
@@ -470,15 +473,19 @@ components:
         ignoreArrayOrder:
           type: boolean
           default: false
+          x-go-type-skip-optional-pointer: true
         equals:
           type: object
           additionalProperties: true
+          x-go-type-skip-optional-pointer: true
         contains:
           type: object
           additionalProperties: true
+          x-go-type-skip-optional-pointer: true
         matches:
           type: object
           additionalProperties: true
+          x-go-type-skip-optional-pointer: true
     StubHeaders:
       type: object
       properties:
@@ -486,32 +493,39 @@ components:
           type: object
           additionalProperties:
             type: string
+          x-go-type-skip-optional-pointer: true
         contains:
           type: object
           additionalProperties:
             type: string
+          x-go-type-skip-optional-pointer: true
         matches:
           type: object
           additionalProperties:
             type: string
+          x-go-type-skip-optional-pointer: true
     StubOutput:
       type: object
       properties:
         data:
           type: object
           additionalProperties: true
+          x-go-type-skip-optional-pointer: true
         stream:
           type: array
           items:
             type: object
             additionalProperties: true
+          x-go-type-skip-optional-pointer: true
         headers:
           type: object
           additionalProperties:
             type: string
+          x-go-type-skip-optional-pointer: true
         error:
           type: string
           example: Message not found
+          x-go-type-skip-optional-pointer: true
         code:
           type: integer
           format: uint32
@@ -520,6 +534,7 @@ components:
             name: codes
             path: google.golang.org/grpc/codes
           example: 3
+          x-go-type-skip-optional-pointer: true
         delay:
           type: string
           x-go-type: time.Duration
