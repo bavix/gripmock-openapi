@@ -430,7 +430,6 @@ components:
             name: codes
             path: google.golang.org/grpc/codes
           example: 3
-          x-omitzero: true
     Stub:
       type: object
       required:
@@ -543,3 +542,4 @@ components:
           description: Delay before sending the response
           example: "1s"
           x-omitzero: true
+          x-go-type-skip-optional-pointer: true
