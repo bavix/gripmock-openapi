@@ -319,9 +319,11 @@ components:
       properties:
         message:
           type: string
+          x-omitzero: false
         time:
           type: string
           format: date-time
+          x-omitzero: false
     # services
     Service:
       type: object
@@ -333,14 +335,18 @@ components:
       properties:
         id:
           type: string
+          x-omitzero: false
         package:
           type: string
+          x-omitzero: false
         name:
           type: string
+          x-omitzero: false
         methods:
           type: array
           items:
             $ref: '#/components/schemas/Method'
+          x-omitzero: false
     Method:
       type: object
       required:
@@ -349,21 +355,26 @@ components:
       properties:
         id:
           type: string
+          x-omitzero: false
         name:
           type: string
+          x-omitzero: false
     # stubs
     ID:
       type: string
       format: uuid
       example: 51c50050-ec27-4dae-a583-a32ca71a1dd5
+      x-omitzero: false
     ListID:
       type: array
       items:
         $ref: '#/components/schemas/ID'
+      x-omitzero: false
     StubList:
       type: array
       items:
         $ref: '#/components/schemas/Stub'
+      x-omitzero: false
     SearchRequest:
       type: object
       required:
@@ -376,9 +387,11 @@ components:
         service:
           type: string
           example: Gripmock
+          x-omitzero: false
         method:
           type: string
           example: SayHello
+          x-omitzero: false
         headers:
           type: object
           additionalProperties:
@@ -388,6 +401,7 @@ components:
           type: object
           x-go-type: interface{}
           additionalProperties: true
+          x-omitzero: false
     SearchResponse:
       type: object
       required:
@@ -403,9 +417,11 @@ components:
           type: object
           x-go-type: interface{}
           additionalProperties: true
+          x-omitzero: false
         error:
           type: string
           example: Message not found
+          x-omitzero: false
         code:
           type: integer
           format: uint32
@@ -414,6 +430,7 @@ components:
             name: codes
             path: google.golang.org/grpc/codes
           example: 3
+          x-omitzero: true
     Stub:
       type: object
       required:
@@ -427,30 +444,37 @@ components:
         service:
           type: string
           example: Gripmock
+          x-omitzero: false
         method:
           type: string
           example: SayHello
+          x-omitzero: false
         priority:
           type: integer
           default: 0
           description: Priority of the stub. Higher priority stubs are matched first.
+          x-go-type-skip-optional-pointer: true
         headers:
           $ref: '#/components/schemas/StubHeaders'
         input:
           $ref: '#/components/schemas/StubInput'
+          x-omitzero: false
         inputs:
           type: array
           description: Inputs to match against. If multiple inputs are provided, the stub will be matched if any of the inputs match.
           items:
             $ref: '#/components/schemas/StubInput'
+          x-go-type-skip-optional-pointer: true
         output:
           $ref: '#/components/schemas/StubOutput'
+          x-omitzero: false
     StubInput:
       type: object
       properties:
         ignoreArrayOrder:
           type: boolean
           default: false
+          x-go-type-skip-optional-pointer: true
         equals:
           type: object
           additionalProperties: true
@@ -488,12 +512,13 @@ components:
         data:
           type: object
           additionalProperties: true
-        stream:
           x-go-type-skip-optional-pointer: true
+        stream:
           type: array
           items:
             type: object
             additionalProperties: true
+          x-go-type-skip-optional-pointer: true
         headers:
           type: object
           additionalProperties:
@@ -502,6 +527,7 @@ components:
         error:
           type: string
           example: Message not found
+          x-go-type-skip-optional-pointer: true
         code:
           type: integer
           format: uint32
@@ -510,8 +536,10 @@ components:
             name: codes
             path: google.golang.org/grpc/codes
           example: 3
+          x-go-type-skip-optional-pointer: true
         delay:
           type: string
           x-go-type: time.Duration
           description: Delay before sending the response
           example: "1s"
+          x-omitzero: true
