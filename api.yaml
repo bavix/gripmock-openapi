@@ -539,7 +539,10 @@ components:
           x-go-type-skip-optional-pointer: true
         delay:
           type: string
-          x-go-type: time.Duration
+          x-go-type: gptypes.Duration
+          x-go-type-import:
+            name: gptypes
+            path: github.com/gripmock/types
           description: Delay before sending the response
           example: "1s"
           x-omitzero: true
