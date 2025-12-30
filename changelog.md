@@ -1,5 +1,30 @@
 # Changelog
 
+## v2.5.1 - 2025-12-30
+
+### What's Changed
+
+* Bump [@redocly](https://github.com/redocly)/cli from 2.0.2 to 2.0.5 by [@dependabot](https://github.com/dependabot)[bot] in https://github.com/bavix/gripmock-openapi/pull/90
+* feat: add delay parameter to API response by [@rez1dent3](https://github.com/rez1dent3) in https://github.com/bavix/gripmock-openapi/pull/91
+* refactor: remove required fields from StubOutput in API specification by [@rez1dent3](https://github.com/rez1dent3) in https://github.com/bavix/gripmock-openapi/pull/92
+* Delay support by [@rez1dent3](https://github.com/rez1dent3) in https://github.com/bavix/gripmock-openapi/pull/93
+* fix: update Go type handling for delay parameter in API specification by [@rez1dent3](https://github.com/rez1dent3) in https://github.com/bavix/gripmock-openapi/pull/94
+* refactor: remove x-go-type-skip-optional-pointer for delay parameter … by [@rez1dent3](https://github.com/rez1dent3) in https://github.com/bavix/gripmock-openapi/pull/95
+* Delay support by [@rez1dent3](https://github.com/rez1dent3) in https://github.com/bavix/gripmock-openapi/pull/96
+* Delay support by [@rez1dent3](https://github.com/rez1dent3) in https://github.com/bavix/gripmock-openapi/pull/97
+* refactor: update delay parameter type in API specification by [@rez1dent3](https://github.com/rez1dent3) in https://github.com/bavix/gripmock-openapi/pull/98
+* build(deps): bump [@redocly](https://github.com/redocly)/cli from 2.0.5 to 2.0.8 by [@dependabot](https://github.com/dependabot)[bot] in https://github.com/bavix/gripmock-openapi/pull/101
+* build(deps): bump bavix/.github from 0.3.3 to 0.4.0 by [@dependabot](https://github.com/dependabot)[bot] in https://github.com/bavix/gripmock-openapi/pull/102
+* build(deps): bump [@redocly](https://github.com/redocly)/cli from 2.0.8 to 2.1.1 by [@dependabot](https://github.com/dependabot)[bot] in https://github.com/bavix/gripmock-openapi/pull/104
+* build(deps): bump bavix/.github/.github/workflows/compile-assets.yml from 0.4.0 to 0.4.1 by [@dependabot](https://github.com/dependabot)[bot] in https://github.com/bavix/gripmock-openapi/pull/113
+* build(deps): bump bavix/.github/.github/workflows/changelog.yml from 0.4.0 to 0.4.1 by [@dependabot](https://github.com/dependabot)[bot] in https://github.com/bavix/gripmock-openapi/pull/112
+* build(deps): bump [@redocly](https://github.com/redocly)/cli from 2.1.1 to 2.2.2 by [@dependabot](https://github.com/dependabot)[bot] in https://github.com/bavix/gripmock-openapi/pull/111
+* build(deps): bump [@redocly](https://github.com/redocly)/cli from 2.12.3 to 2.12.4 by [@dependabot](https://github.com/dependabot)[bot] in https://github.com/bavix/gripmock-openapi/pull/114
+* Update Makefile and package.json to use remote API specification URL by [@rez1dent3](https://github.com/rez1dent3) in https://github.com/bavix/gripmock-openapi/pull/121
+* build(deps): bump [@redocly](https://github.com/redocly)/cli from 2.12.4 to 2.14.1 by [@dependabot](https://github.com/dependabot)[bot] in https://github.com/bavix/gripmock-openapi/pull/120
+
+**Full Changelog**: https://github.com/bavix/gripmock-openapi/compare/v2.5.0...v2.5.1
+
 ## v2.5.0 - 2025-08-09
 
 ### What's Changed
