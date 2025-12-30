@@ -5,7 +5,7 @@
   "description": "Documentation and API specification GripMock.",
   "private": true,
   "scripts": {
-    "build": "redocly build-docs api.yaml -o docs/index.html"
+    "build": "redocly build-docs https://raw.githubusercontent.com/bavix/gripmock/refs/heads/master/api/api.yaml -o docs/index.html"
   },
   "repository": {
     "type": "git",
