@@ -1,5 +1,13 @@
 # Changelog
 
+## v2.6.0 - 2026-03-08
+
+### What's Changed
+
+* build(deps): bump [@redocly](https://github.com/redocly)/cli from 2.14.2 to 2.17.0 by [@dependabot](https://github.com/dependabot)[bot] in https://github.com/bavix/gripmock-openapi/pull/131
+
+**Full Changelog**: https://github.com/bavix/gripmock-openapi/compare/v2.5.1...v2.6.0
+
 ## v2.5.1 - 2025-12-30
 
 ### What's Changed
