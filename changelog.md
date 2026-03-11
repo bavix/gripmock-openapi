@@ -1,5 +1,16 @@
 # Changelog
 
+## v3.8.2 - 2026-03-11
+
+### What's Changed
+
+* build(deps): bump [@redocly](https://github.com/redocly)/cli from 2.20.4 to 2.21.0 by [@dependabot](https://github.com/dependabot)[bot] in https://github.com/bavix/gripmock-openapi/pull/134
+* build(deps): bump dompurify from 3.3.0 to 3.3.3 by [@dependabot](https://github.com/dependabot)[bot] in https://github.com/bavix/gripmock-openapi/pull/133
+* build(deps): bump minimatch from 5.1.6 to 5.1.9 by [@dependabot](https://github.com/dependabot)[bot] in https://github.com/bavix/gripmock-openapi/pull/132
+* v3.8.2 by [@rez1dent3](https://github.com/rez1dent3) in https://github.com/bavix/gripmock-openapi/pull/135
+
+**Full Changelog**: https://github.com/bavix/gripmock-openapi/compare/v2.6.0...v3.8.2
+
 ## v2.6.0 - 2026-03-08
 
 ### What's Changed
