@@ -1,5 +1,21 @@
 # Changelog
 
+## v3.9.1 - 2026-03-31
+
+### What's Changed
+
+* build(deps): bump [@redocly](https://github.com/redocly)/cli from 2.21.0 to 2.22.1 by [@dependabot](https://github.com/dependabot)[bot] in https://github.com/bavix/gripmock-openapi/pull/137
+* build(deps): bump fast-xml-parser from 5.4.2 to 5.5.6 by [@dependabot](https://github.com/dependabot)[bot] in https://github.com/bavix/gripmock-openapi/pull/138
+* build(deps): bump [@redocly](https://github.com/redocly)/cli from 2.22.1 to 2.25.1 by [@dependabot](https://github.com/dependabot)[bot] in https://github.com/bavix/gripmock-openapi/pull/141
+* ci(deps): bump the actions group across 1 directory with 2 updates by [@dependabot](https://github.com/dependabot)[bot] in https://github.com/bavix/gripmock-openapi/pull/145
+* chore(npm-deps): bump brace-expansion by [@dependabot](https://github.com/dependabot)[bot] in https://github.com/bavix/gripmock-openapi/pull/146
+* chore(npm-deps): bump fast-xml-parser from 5.5.6 to 5.5.9 by [@dependabot](https://github.com/dependabot)[bot] in https://github.com/bavix/gripmock-openapi/pull/148
+* chore(npm-deps): bump yaml from 1.10.2 to 1.10.3 by [@dependabot](https://github.com/dependabot)[bot] in https://github.com/bavix/gripmock-openapi/pull/147
+* chore(npm-deps): bump [@redocly](https://github.com/redocly)/cli from 2.25.1 to 2.25.3 by [@dependabot](https://github.com/dependabot)[bot] in https://github.com/bavix/gripmock-openapi/pull/144
+* chore(npm-deps): bump handlebars from 4.7.8 to 4.7.9 by [@dependabot](https://github.com/dependabot)[bot] in https://github.com/bavix/gripmock-openapi/pull/143
+
+**Full Changelog**: https://github.com/bavix/gripmock-openapi/compare/v3.8.2...v3.9.1
+
 ## v3.8.2 - 2026-03-11
 
 ### What's Changed
